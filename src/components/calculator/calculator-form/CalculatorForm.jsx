@@ -52,6 +52,7 @@ function CalculatorForm({
     <Container>
       <InputBox>
         <Input
+          data-testid="input-a"
           type="text"
           spellcheck="false"
           placeholder="A"
@@ -63,6 +64,7 @@ function CalculatorForm({
           error={A && !isNumeric(A)}
         />
         <Select
+          data-testid="operation-select"
           value={operation}
           onChange={(event) => {
             event.preventDefault();
@@ -74,6 +76,7 @@ function CalculatorForm({
           )}
         </Select>
         <Input
+          data-testid="input-b"
           type="text"
           spellCheck={false}
           placeholder="B"
@@ -87,6 +90,7 @@ function CalculatorForm({
       </InputBox>
       <ButtonBox>
         <Button
+          data-testid="calculate"
           type="button"
           disabled={!(isNumeric(A) && isNumeric(B))}
           onClick={(event) => {

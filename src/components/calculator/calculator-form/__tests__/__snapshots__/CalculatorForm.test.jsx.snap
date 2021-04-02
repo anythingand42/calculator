@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalculatorForm component 1`] = `
+.c2 {
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  padding: 4px;
+  min-height: 28px;
+}
+
+.c3 {
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  background: none;
+  min-height: 28px;
+}
+
+.c5 {
+  min-height: 28px;
+}
+
+.c0 {
+  width: 100%;
+}
+
+.c0 input,
+.c0 select,
+.c0 button {
+  font-size: 16px;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5em;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+@media only screen and (min-width:768px) {
+  .c1 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .c1 > select {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .c1 > *:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <input
+      class="c2"
+      data-testid="input-a"
+      placeholder="A"
+      type="text"
+      value="2"
+    />
+    <select
+      class="c3"
+      data-testid="operation-select"
+    >
+      <option
+        value="0"
+      >
+        + (sum)
+      </option>
+      <option
+        value="1"
+      >
+        / (divide)
+      </option>
+      <option
+        value="2"
+      >
+        % (mod)
+      </option>
+      <option
+        value="3"
+      >
+        max prime between
+      </option>
+    </select>
+    <input
+      class="c2"
+      data-testid="input-b"
+      placeholder="B"
+      spellcheck="false"
+      type="text"
+      value="4"
+    />
+  </div>
+  <div
+    class="c4"
+  >
+    <button
+      class="c5"
+      data-testid="calculate"
+      type="button"
+    >
+      Calculate
+    </button>
+  </div>
+</div>
+`;
+
+exports[`CalculatorForm component in an invalid state 1`] = `
+.c2 {
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  padding: 4px;
+  min-height: 28px;
+  border-color: red;
+  color: red;
+}
+
+.c3 {
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  background: none;
+  min-height: 28px;
+}
+
+.c5 {
+  min-height: 28px;
+}
+
+.c0 {
+  width: 100%;
+}
+
+.c0 input,
+.c0 select,
+.c0 button {
+  font-size: 16px;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5em;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+@media only screen and (min-width:768px) {
+  .c1 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .c1 > select {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .c1 > *:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <input
+      class="c2"
+      data-testid="input-a"
+      placeholder="A"
+      type="text"
+      value="ababa"
+    />
+    <select
+      class="c3"
+      data-testid="operation-select"
+    >
+      <option
+        value="0"
+      >
+        + (sum)
+      </option>
+      <option
+        value="1"
+      >
+        / (divide)
+      </option>
+      <option
+        value="2"
+      >
+        % (mod)
+      </option>
+      <option
+        value="3"
+      >
+        max prime between
+      </option>
+    </select>
+    <input
+      class="c2"
+      data-testid="input-b"
+      placeholder="B"
+      spellcheck="false"
+      type="text"
+      value="lalala"
+    />
+  </div>
+  <div
+    class="c4"
+  >
+    <button
+      class="c5"
+      data-testid="calculate"
+      disabled=""
+      type="button"
+    >
+      Calculate
+    </button>
+  </div>
+</div>
+`;
