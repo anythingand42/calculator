@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator component 1`] = `
+.c3 {
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  padding: 4px;
+  min-height: 28px;
+}
+
+.c4 {
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  background: none;
+  min-height: 28px;
+}
+
+.c6 {
+  min-height: 28px;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c1 input,
+.c1 select,
+.c1 button {
+  font-size: 16px;
+}
+
+.c2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5em;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c0 {
+  max-width: 768px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 .history {
+  margin-top: 1em;
+}
+
+@media only screen and (min-width:768px) {
+  .c2 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .c2 > select {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .c2 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .c2 > *:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <input
+        class="c3"
+        data-testid="input-a"
+        placeholder="A"
+        type="text"
+        value=""
+      />
+      <select
+        class="c4"
+        data-testid="operation-select"
+      >
+        <option
+          value="0"
+        >
+          + (sum)
+        </option>
+        <option
+          value="1"
+        >
+          / (divide)
+        </option>
+        <option
+          value="2"
+        >
+          % (mod)
+        </option>
+        <option
+          value="3"
+        >
+          max prime between
+        </option>
+      </select>
+      <input
+        class="c3"
+        data-testid="input-b"
+        placeholder="B"
+        spellcheck="false"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="c5"
+    >
+      <button
+        class="c6"
+        data-testid="calculate"
+        disabled=""
+        type="button"
+      >
+        Calculate
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -14,7 +14,7 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case ActionEnum.setOperation:
-      return { ...state, operation: action.payload };
+      return { ...state, operation: Number(action.payload) };
     case ActionEnum.setA:
       return { ...state, A: action.payload };
     case ActionEnum.setB:
@@ -28,6 +28,7 @@ function reducer(state, action) {
           B: state.B,
           operation: state.operation,
           result: result ? String(result) : 'not found',
+          key: state.history.length,
         }),
       };
     }
