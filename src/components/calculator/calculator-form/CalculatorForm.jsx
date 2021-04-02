@@ -103,8 +103,8 @@ function CalculatorForm({
 
 CalculatorForm.propTypes = {
   A: PropTypes.string.isRequired,
-  operation: PropTypes.string.isRequired,
   B: PropTypes.string.isRequired,
+  operation: PropTypes.number.isRequired,
   dispatch: PropTypes.func.isRequired,
 };
 
