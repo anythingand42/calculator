@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 import Input from '../../input';
 import Select from '../../select';
 import Button from '../../button';
-import isNumeric from '../../../utils/isNumeric';
+import isNumeric from '../../../math-utils/isNumeric';
+import { ActionEnum, operations } from '../shared/const';
 
 const Container = styled.div`
   width: 100%;
@@ -41,20 +42,6 @@ const ButtonBox = styled.div`
   justify-content: flex-end;
 `;
 
-const OperationEnum = {
-  sum: '+ (sum)',
-  divide: '/ (divide)',
-  mod: '% (remainder of a division)',
-  maxPrimeBetween: 'Max prime number between A and B',
-};
-
-const ActionEnum = {
-  setOperation: 0,
-  setA: 1,
-  setB: 2,
-  calculate: 3,
-};
-
 function CalculatorForm({
   A,
   B,
@@ -82,8 +69,8 @@ function CalculatorForm({
             dispatch({ type: ActionEnum.setOperation, payload: event.target.value });
           }}
         >
-          {Object.values(OperationEnum).map(
-            ((value) => <option key={value} value={value}>{value}</option>),
+          {Object.entries(operations).map(
+            (([key, label]) => <option key={key} value={key}>{label}</option>),
           )}
         </Select>
         <Input

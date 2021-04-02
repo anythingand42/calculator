@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+import { operations } from '../shared/const';
+
 const StyledTable = styled.table`
   width: 100%;
   border-collapse: collapse;
@@ -40,7 +42,7 @@ function History({ entries, className }) {
         {entries.map((entry) => (
           <tr>
             <td>{entry.A}</td>
-            <td>{entry.operation}</td>
+            <td>{operations[entry.operation]}</td>
             <td>{entry.B}</td>
             <td>{entry.result}</td>
           </tr>
