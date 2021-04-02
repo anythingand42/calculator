@@ -53,12 +53,12 @@ function History({ entries, className }) {
 }
 
 History.propTypes = {
-  entries: PropTypes.arrayOf({
+  entries: PropTypes.arrayOf(PropTypes.shape({
     A: PropTypes.string,
     operation: PropTypes.string,
     B: PropTypes.string,
     result: PropTypes.string,
-  }).isRequired,
+  })).isRequired,
   className: PropTypes.string,
 };
 
