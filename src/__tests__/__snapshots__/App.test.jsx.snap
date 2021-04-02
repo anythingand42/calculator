@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`initial state 1`] = `
 .c4 {
   border: 1px solid #ccc;
   outline: none;
@@ -122,12 +122,14 @@ exports[`renders correctly 1`] = `
       >
         <input
           class="c4"
+          data-testid="input-a"
           placeholder="A"
           type="text"
           value=""
         />
         <select
           class="c5"
+          data-testid="operation-select"
         >
           <option
             value="0"
@@ -152,6 +154,7 @@ exports[`renders correctly 1`] = `
         </select>
         <input
           class="c4"
+          data-testid="input-b"
           placeholder="B"
           spellcheck="false"
           type="text"
@@ -163,6 +166,7 @@ exports[`renders correctly 1`] = `
       >
         <button
           class="c7"
+          data-testid="calculate"
           disabled=""
           type="button"
         >
@@ -170,6 +174,285 @@ exports[`renders correctly 1`] = `
         </button>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`main usage 1`] = `
+.c4 {
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  padding: 4px;
+  min-height: 28px;
+}
+
+.c5 {
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  background: none;
+  min-height: 28px;
+}
+
+.c7 {
+  min-height: 28px;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c2 input,
+.c2 select,
+.c2 button {
+  font-size: 16px;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5em;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c8 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.c8 th,
+.c8 td {
+  border: 1px solid #ddd;
+  padding: 4px;
+  width: 25%;
+}
+
+.c8 td {
+  text-align: center;
+}
+
+.c8 tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.c8 th {
+  background-color: #f2f2f2;
+}
+
+.c1 {
+  max-width: 768px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c1 .history {
+  margin-top: 1em;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width:768px) {
+  .c3 {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .c3 > select {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .c3 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .c3 > *:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c2"
+    >
+      <div
+        class="c3"
+      >
+        <input
+          class="c4"
+          data-testid="input-a"
+          placeholder="A"
+          type="text"
+          value="34"
+        />
+        <select
+          class="c5"
+          data-testid="operation-select"
+        >
+          <option
+            value="0"
+          >
+            + (sum)
+          </option>
+          <option
+            value="1"
+          >
+            / (divide)
+          </option>
+          <option
+            value="2"
+          >
+            % (mod)
+          </option>
+          <option
+            value="3"
+          >
+            max prime between
+          </option>
+        </select>
+        <input
+          class="c4"
+          data-testid="input-b"
+          placeholder="B"
+          spellcheck="false"
+          type="text"
+          value="900"
+        />
+      </div>
+      <div
+        class="c6"
+      >
+        <button
+          class="c7"
+          data-testid="calculate"
+          type="button"
+        >
+          Calculate
+        </button>
+      </div>
+    </div>
+    <table
+      class="c8 history"
+    >
+      <thead>
+        <tr>
+          <th>
+            A
+          </th>
+          <th>
+            Operation
+          </th>
+          <th>
+            B
+          </th>
+          <th>
+            Result
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            2
+          </td>
+          <td>
+            + (sum)
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            6
+          </td>
+        </tr>
+        <tr>
+          <td>
+            20
+          </td>
+          <td>
+            / (divide)
+          </td>
+          <td>
+            4
+          </td>
+          <td>
+            5
+          </td>
+        </tr>
+        <tr>
+          <td>
+            297
+          </td>
+          <td>
+            % (mod)
+          </td>
+          <td>
+            13
+          </td>
+          <td>
+            11
+          </td>
+        </tr>
+        <tr>
+          <td>
+            34
+          </td>
+          <td>
+            max prime between
+          </td>
+          <td>
+            900
+          </td>
+          <td>
+            887
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 `;
