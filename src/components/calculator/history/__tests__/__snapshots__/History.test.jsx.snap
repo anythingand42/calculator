@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`History component 1`] = `
+.c0 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.c0 th,
+.c0 td {
+  border: 1px solid #ddd;
+  padding: 4px;
+  width: 25%;
+}
+
+.c0 td {
+  text-align: center;
+}
+
+.c0 tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.c0 th {
+  background-color: #f2f2f2;
+}
+
+<table
+  class="c0"
+>
+  <thead>
+    <tr>
+      <th>
+        A
+      </th>
+      <th>
+        Operation
+      </th>
+      <th>
+        B
+      </th>
+      <th>
+        Result
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        2
+      </td>
+      <td>
+        + (sum)
+      </td>
+      <td>
+        2
+      </td>
+      <td>
+        4
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2
+      </td>
+      <td>
+        / (divide)
+      </td>
+      <td>
+        4
+      </td>
+      <td>
+        0.5
+      </td>
+    </tr>
+    <tr>
+      <td>
+        3
+      </td>
+      <td>
+        % (mod)
+      </td>
+      <td>
+        2
+      </td>
+      <td>
+        1
+      </td>
+    </tr>
+    <tr>
+      <td>
+        2
+      </td>
+      <td>
+        max prime between
+      </td>
+      <td>
+        7
+      </td>
+      <td>
+        7
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
