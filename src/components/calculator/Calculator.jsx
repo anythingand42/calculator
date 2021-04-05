@@ -21,7 +21,12 @@ function Calculator() {
   const [state, dispatch] = useCalculatorLogic();
   return (
     <Box>
-      <CalculatorForm A={state.A} B={state.B} operation={state.operation} dispatch={dispatch} />
+      <CalculatorForm
+        operandA={state.operandA}
+        operandB={state.operandB}
+        operation={state.operation}
+        dispatch={dispatch}
+      />
       <History className="history" entries={state.history} />
     </Box>
   );

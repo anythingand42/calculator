@@ -41,9 +41,9 @@ function History({ entries, className }) {
       <tbody>
         {entries.map((entry) => (
           <tr key={entry.key}>
-            <td>{entry.A}</td>
+            <td>{entry.operandA}</td>
             <td>{operations[entry.operation]}</td>
-            <td>{entry.B}</td>
+            <td>{entry.operandB}</td>
             <td>{entry.result}</td>
           </tr>
         ))}
@@ -54,8 +54,8 @@ function History({ entries, className }) {
 
 History.propTypes = {
   entries: PropTypes.arrayOf(PropTypes.shape({
-    A: PropTypes.string,
-    B: PropTypes.string,
+    operandA: PropTypes.string,
+    operandB: PropTypes.string,
     operation: PropTypes.number,
     result: PropTypes.string,
     key: PropTypes.number,

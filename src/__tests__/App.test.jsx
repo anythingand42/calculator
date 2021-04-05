@@ -17,9 +17,9 @@ test('main usage', () => {
   const operationSelect = screen.getByTestId('operation-select');
   const calcButton = screen.getByTestId('calculate');
 
-  const doCalculation = (A, B, operation) => {
-    fireEvent.change(inputA, { target: { value: A } });
-    fireEvent.change(inputB, { target: { value: B } });
+  const doCalculation = (operandA, operandB, operation) => {
+    fireEvent.change(inputA, { target: { value: operandA } });
+    fireEvent.change(inputB, { target: { value: operandB } });
     fireEvent.change(operationSelect, { target: { value: operation } });
     fireEvent.click(calcButton);
   };

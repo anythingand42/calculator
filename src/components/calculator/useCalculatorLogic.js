@@ -6,8 +6,8 @@ import { ActionEnum } from './shared/const';
 
 const initialState = {
   operation: OperationEnum.sum,
-  A: '',
-  B: '',
+  operandA: '',
+  operandB: '',
   history: [],
 };
 
@@ -15,17 +15,19 @@ function reducer(state, action) {
   switch (action.type) {
     case ActionEnum.setOperation:
       return { ...state, operation: Number(action.payload) };
-    case ActionEnum.setA:
-      return { ...state, A: action.payload };
-    case ActionEnum.setB:
-      return { ...state, B: action.payload };
+    case ActionEnum.setOperandA:
+      return { ...state, operandA: action.payload };
+    case ActionEnum.setOperandB:
+      return { ...state, operandB: action.payload };
     case ActionEnum.calculate: {
-      const result = operationHandlers[state.operation](parseFloat(state.A), parseFloat(state.B));
+      const result = operationHandlers[state.operation](
+        parseFloat(state.operandA), parseFloat(state.operandB),
+      );
       return {
         ...state,
         history: state.history.concat({
-          A: state.A,
-          B: state.B,
+          operandA: state.operandA,
+          operandB: state.operandB,
           operation: state.operation,
           result: result ? String(result) : 'not found',
           key: state.history.length,

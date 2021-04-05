@@ -43,8 +43,8 @@ const ButtonBox = styled.div`
 `;
 
 function CalculatorForm({
-  A,
-  B,
+  operandA,
+  operandB,
   operation,
   dispatch,
 }) {
@@ -56,12 +56,12 @@ function CalculatorForm({
           type="text"
           spellcheck="false"
           placeholder="A"
-          value={A}
+          value={operandA}
           onChange={(event) => {
             event.preventDefault();
-            dispatch({ type: ActionEnum.setA, payload: event.target.value });
+            dispatch({ type: ActionEnum.setOperandA, payload: event.target.value });
           }}
-          error={A && !isNumeric(A)}
+          error={operandA && !isNumeric(operandA)}
         />
         <Select
           data-testid="operation-select"
@@ -80,19 +80,19 @@ function CalculatorForm({
           type="text"
           spellCheck={false}
           placeholder="B"
-          value={B}
+          value={operandB}
           onChange={(event) => {
             event.preventDefault();
-            dispatch({ type: ActionEnum.setB, payload: event.target.value });
+            dispatch({ type: ActionEnum.setOperandB, payload: event.target.value });
           }}
-          error={B && !isNumeric(B)}
+          error={operandB && !isNumeric(operandB)}
         />
       </InputBox>
       <ButtonBox>
         <Button
           data-testid="calculate"
           type="button"
-          disabled={!(isNumeric(A) && isNumeric(B))}
+          disabled={!(isNumeric(operandA) && isNumeric(operandB))}
           onClick={(event) => {
             event.preventDefault();
             dispatch({ type: ActionEnum.calculate });
@@ -106,8 +106,8 @@ function CalculatorForm({
 }
 
 CalculatorForm.propTypes = {
-  A: PropTypes.string.isRequired,
-  B: PropTypes.string.isRequired,
+  operandA: PropTypes.string.isRequired,
+  operandB: PropTypes.string.isRequired,
   operation: PropTypes.number.isRequired,
   dispatch: PropTypes.func.isRequired,
 };

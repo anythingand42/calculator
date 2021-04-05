@@ -10,16 +10,16 @@ test('History component', () => {
     <History
       entries={[
         {
-          key: 0, A: '2', B: '2', operation: OperationEnum.sum, result: '4',
+          key: 0, operandA: '2', operandB: '2', operation: OperationEnum.sum, result: '4',
         },
         {
-          key: 1, A: '2', B: '4', operation: OperationEnum.divide, result: '0.5',
+          key: 1, operandA: '2', operandB: '4', operation: OperationEnum.divide, result: '0.5',
         },
         {
-          key: 2, A: '3', B: '2', operation: OperationEnum.mod, result: '1',
+          key: 2, operandA: '3', operandB: '2', operation: OperationEnum.mod, result: '1',
         },
         {
-          key: 3, A: '2', B: '7', operation: OperationEnum.maxPrimeBetween, result: '7',
+          key: 3, operandA: '2', operandB: '7', operation: OperationEnum.maxPrimeBetween, result: '7',
         },
       ]}
     />,

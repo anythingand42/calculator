@@ -2,8 +2,8 @@ import OperationEnum from '../../../math-utils/OperationEnum';
 
 export const ActionEnum = {
   setOperation: 0,
-  setA: 1,
-  setB: 2,
+  setOperandA: 1,
+  setOperandB: 2,
   calculate: 3,
 };
 

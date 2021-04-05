@@ -7,20 +7,20 @@ import useCalculatorLogic from '../useCalculatorLogic';
 test('useCalculatorLogic hook', () => {
   const { result } = renderHook(() => useCalculatorLogic());
 
-  expect(result.current[0].A).toBe('');
-  expect(result.current[0].B).toBe('');
+  expect(result.current[0].operandA).toBe('');
+  expect(result.current[0].operandB).toBe('');
   expect(result.current[0].operation).toBe(OperationEnum.sum);
   expect(result.current[0].history.length).toBe(0);
 
   act(() => {
-    result.current[1]({ type: ActionEnum.setA, payload: '3' });
+    result.current[1]({ type: ActionEnum.setOperandA, payload: '3' });
   });
-  expect(result.current[0].A).toBe('3');
+  expect(result.current[0].operandA).toBe('3');
 
   act(() => {
-    result.current[1]({ type: ActionEnum.setB, payload: '2' });
+    result.current[1]({ type: ActionEnum.setOperandB, payload: '2' });
   });
-  expect(result.current[0].B).toBe('2');
+  expect(result.current[0].operandB).toBe('2');
 
   act(() => {
     result.current[1]({ type: ActionEnum.setOperation, payload: OperationEnum.sum });
